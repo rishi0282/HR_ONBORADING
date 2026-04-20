@@ -1,4 +1,4 @@
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 from mcp.types import TextContent
 from openpyxl import Workbook, load_workbook
 from openpyxl.utils import get_column_letter
