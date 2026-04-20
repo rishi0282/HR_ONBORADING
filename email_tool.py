@@ -1,4 +1,4 @@
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 from mcp.types import TextContent
 import smtplib
 from email.mime.text import MIMEText
@@ -92,4 +92,4 @@ def send_bulk_emails(
             text=f"❌ Error: {str(e)}"
         )]
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="sse",host="0.0.0.0",port="8080")
