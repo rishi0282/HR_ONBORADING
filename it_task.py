@@ -464,4 +464,4 @@ if __name__ == "__main__":
     # # Set port explicitly
     # os.environ["MCP_PORT"] = "8000"
     # print("🚀 Server starting on port 8000...", file=sys.stderr)
-    mcp.run(transport="sse")
+    mcp.run(transport="sse",host="0.0.0.0")
