@@ -464,9 +464,10 @@ if __name__ == "__main__":
     import os
     # Get port from environment
     port = int(os.environ.get("PORT", 8000))
+    app = mcp.http_app()
     # Run with uvicorn
     uvicorn.run(
-        "it_task:mcp._app",  # Path to your FastMCP app
+        "it_task:app",  # Path to your FastMCP app
         host="0.0.0.0",
         port=port,
         log_level="info"
