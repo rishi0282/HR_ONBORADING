@@ -459,29 +459,30 @@ def update_email_setup_status(employee_id: int) -> list[TextContent]:
             text=f"❌ Error updating email setup status: {str(e)}"
         )]
 
-# if __name__ == "__main__":
-#     import uvicorn
-#     import os
-#     # Get port from environment
-#     port = int(os.environ.get("PORT", 8000))
-#     app = mcp._app
-#     # Run with uvicorn
-#     uvicorn.run(
-#         app,  # Path to your FastMCP app
-#         host="0.0.0.0",
-#         port=port,
-#         log_level="info"
-#     )
-
-
 if __name__ == "__main__":
-    import os
-    import sys
-    # Render provides PORT environment variable
-    port = os.environ.get("PORT", "8000")
-    print(f"🚀 Starting IT Tasks Server on port {port}", file=sys.stderr)
-    # MCP should read HOST and PORT from environment
-    os.environ["MCP_HOST"] = "0.0.0.0"
-    os.environ["MCP_PORT"] = port
-    # Run with SSE transport
-    mcp.run(transport="sse")
+    # import uvicorn
+    # import os
+    # # Get port from environment
+    # port = int(os.environ.get("PORT", 8000))
+    # app = mcp._app
+    # # Run with uvicorn
+    # uvicorn.run(
+    #     app,  # Path to your FastMCP app
+    #     host="0.0.0.0",
+    #     port=port,
+    #     log_level="info"
+    # )
+    mcp.run(transport="http",host="0.0.0.0",port=8000)
+
+
+# if __name__ == "__main__":
+#     import os
+#     import sys
+#     # Render provides PORT environment variable
+#     port = os.environ.get("PORT", "8000")
+#     print(f"🚀 Starting IT Tasks Server on port {port}", file=sys.stderr)
+#     # MCP should read HOST and PORT from environment
+#     os.environ["MCP_HOST"] = "0.0.0.0"
+#     os.environ["MCP_PORT"] = port
+#     # Run with SSE transport
+#     mcp.run(transport="sse")
