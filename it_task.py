@@ -472,7 +472,7 @@ if __name__ == "__main__":
     #     port=port,
     #     log_level="info"
     # )
-    mcp.run(transport="http",host="0.0.0.0",port=8000)
+    mcp.run(transport="sse",host="0.0.0.0",port=8000)
 
 
 # if __name__ == "__main__":
