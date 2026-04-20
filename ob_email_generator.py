@@ -1,4 +1,4 @@
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 from mcp.types import TextContent
 from openpyxl import Workbook, load_workbook
 from openpyxl.utils import get_column_letter
@@ -607,4 +607,4 @@ def update_training_email_status(employee_id: int) -> list[TextContent]:
     
 
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="http",host="0.0.0.0",port=9000)
