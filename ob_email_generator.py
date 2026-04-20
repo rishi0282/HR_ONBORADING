@@ -607,4 +607,4 @@ def update_training_email_status(employee_id: int) -> list[TextContent]:
     
 
 if __name__ == "__main__":
-    mcp.run(transport="http",host="0.0.0.0",port=9000)
+    mcp.run(transport="sse",host="0.0.0.0",port=9000)
